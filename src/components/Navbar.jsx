@@ -6,7 +6,6 @@ import Footer from "./Footer";
 export default function Navbar() {
   return (
     <div>
-      <LeftSide />
       <RightSide />
       <Footer />
     </div>

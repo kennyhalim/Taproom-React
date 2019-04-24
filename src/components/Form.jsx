@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Form() {
   return (
@@ -86,7 +87,9 @@ export default function Form() {
         <input className="where" type="text" placeholder="Guests" />
 
         <div className="btnContainer">
-          <button className="submitBtn">Search</button>
+          <Link to="/search">
+            <button className="submitBtn">Search</button>
+          </Link>
         </div>
       </form>
     </div>
