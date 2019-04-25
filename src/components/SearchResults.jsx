@@ -107,7 +107,7 @@ export default function SearchResults() {
       </div>
       <Explore />
       <div className="box1">
-        <h2>Introducing AirBnbB Plus</h2>
+        <h2>Introducing AirBnB Plus</h2>
         <p>A selection of homes verified for quality and design</p>
       </div>
       <div className="box2">

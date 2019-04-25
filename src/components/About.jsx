@@ -15,24 +15,19 @@ export default function About() {
           text-align: center;
         }
         .box1 {
-          border: 1px solid black;
           height: 15vh;
           display: flex;
           justify-content: space-around;
           align-items: center;
-          border-radius: 5px;
           margin-bottom: 5px;
-          background-color: lightcoral;
         }
         .box2 {
-          border: 1px solid black;
           height: 10vh;
           display: flex;
           justify-content: space-around;
           align-items: center;
-          border-radius: 5px;
           margin-bottom: 5px;
-          background-color: lightcoral;
+          color: #515151;
         }
         .parentColumn {
           display: grid;
@@ -117,7 +112,7 @@ export default function About() {
           </p>
         </div>
       </div>
-      <div className="box2">jkkjkjkjkjkjkj</div>
+      <div className="box2">&copy;Copyright Mark & Kenny</div>
     </div>
   );
 }
