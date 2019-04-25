@@ -58,6 +58,10 @@ export default function Form() {
             font-weight: bold;
           }
 
+          .submitBtn:hover {
+            cursor: pointer;
+          }
+
           .btnContainer {
             display: flex;
             justify-content: flex-end;

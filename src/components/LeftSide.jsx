@@ -5,11 +5,6 @@ export default function LeftSide() {
     <div>
       <style jsx>
         {`
-          .searchInput {
-          }
-
-          .searchImg {
-          }
           .searchInput input {
             height: 38px;
             width: 350px;
@@ -34,9 +29,11 @@ export default function LeftSide() {
           <img src="https://www.shareicon.net/download/2016/11/22/855119_circle_512x512.png" />
         </Link>
       </div>
-      <div className="searchInput">
-        <input type="text" placeholder="Try 'Orlando'" />
-      </div>
+      <Link to="/search">
+        <div className="searchInput">
+          <input type="text" placeholder="Try 'Orlando'" />
+        </div>
+      </Link>
     </div>
   );
 }

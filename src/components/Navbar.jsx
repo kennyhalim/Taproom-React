@@ -1,5 +1,4 @@
 import React from "react";
-import LeftSide from "./LeftSide";
 import RightSide from "./RightSide";
 import Footer from "./Footer";
 

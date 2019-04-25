@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function RightSideYoung() {
   return (
@@ -43,6 +44,11 @@ export default function RightSideYoung() {
         <div className="first">
           <p>Log in</p>
         </div>
+        <Link to="/about">
+          <div className="first">
+            <p>About Us</p>
+          </div>
+        </Link>
       </div>
     </div>
   );
