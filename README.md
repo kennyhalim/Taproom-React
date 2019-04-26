@@ -1,36 +1,40 @@
-# _Farmer Market_
+# _Taproom React_
 
-#### _A web application for farmer's market circuit, Created 04/23/2019_
+#### _A web application of a clone of an Angular project using React._
 
-#### By _**Yulia Shidlovskaya, Young Liu and Theary Im**_
+#### By _**Kenny Halim**_
 
 ## Description
 
-_A web application for farmer's market circuit. Customers can see which location this farmer market will be at. The market has different crops in different seasons. Different produce is available in different seasons._
+_A web application that allows user to see different lists of kegs and be able to edit and add new keg._
+
+## Planning
+
+_<img src="flowchart.png">_
 
 ## Setup/Installation Requirements
 
-* Download and install Node.js
-* Clone this repository: $ git clone repo name
-* Change into the work directory: $ cd repo name
-* Run the command $ npm install
-* Run the command $ npm run start
+- Download and install Node.js
+- Clone this repository: \$ git clone repo name
+- Change into the work directory: \$ cd repo name
+- Run the command \$ npm install
+- Run the command \$ npm run start
 
 ## Support and contact details
 
-_If you run into any issues or have questions, ideas or concerns. Please contact us at jasmine.al1722@gmail.com or thearyim@gmail.com_
+_If you run into any issues or have questions, ideas or concerns. Please contact us at kennyhalim98@gmail.com_
 
 ## Technologies Used
 
-* HTML
-* CSS
-* Bootstrap
-* Javascript
-* WebPack
-* Node Package Manager
+- HTML
+- CSS
+- Javascript
+- React
+- WebPack
+- Node Package Manager
 
 ### License
 
-*MIT*
+_MIT_
 
-Copyright (c) 2019 **_Yulia Shidlovskaya, Young Liu and Theary Im_**
+Copyright (c) 2019 **_Kenny Halim_**
