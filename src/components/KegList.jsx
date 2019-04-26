@@ -26,18 +26,27 @@ export default function KegList() {
         h1 {
           text-align: center;
         }
+        .grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-gap: 10px;
+          margin-left: 80px;
+          margin-right: 80px;
+        }
       `}</style>
       <Link to="/">
         <h1>Keg List</h1>
       </Link>
-      {masterKegList.map((keg, index) => (
-        <KegDetail
-          name={keg.name}
-          brand={keg.brand}
-          price={keg.price}
-          key={index}
-        />
-      ))}
+      <div className="grid">
+        {masterKegList.map((keg, index) => (
+          <KegDetail
+            name={keg.name}
+            brand={keg.brand}
+            price={keg.price}
+            key={index}
+          />
+        ))}
+      </div>
     </div>
   );
 }
