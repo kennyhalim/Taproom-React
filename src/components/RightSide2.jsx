@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function RightSide() {
+export default function RightSide2() {
   return (
     <div>
       <style jsx>
@@ -18,13 +18,13 @@ export default function RightSide() {
 
           .first p {
             font-size: 15px;
-            color: white;
+            color: #515151;
             padding-bottom: 30px;
             border-bottom: 2px solid transparent;
           }
 
           .first p:hover {
-            border-bottom: 2px solid white;
+            border-bottom: 2px solid #515151;
             padding-bottom: 30px;
             cursor: pointer;
           }
@@ -32,11 +32,14 @@ export default function RightSide() {
       </style>
 
       <div className="container">
-        <Link to="/keglist">
+        <Link to="/">
           <div className="first">
-            <p>Keg Lists</p>
+            <p>Home</p>
           </div>
         </Link>
+        <div className="first">
+          <p>Keg Lists</p>
+        </div>
         <div className="first">
           <p>Brew Market</p>
         </div>

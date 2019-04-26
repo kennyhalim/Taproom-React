@@ -1,7 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import KegDetail from "./KegDetail";
-import RightSide from "./RightSide";
+import RightSide2 from "./RightSide2";
 const masterKegList = [
   {
     name: "testName",
@@ -24,15 +23,6 @@ export default function KegList() {
   return (
     <div>
       <style jsx>{`
-        h1 {
-          text-align: center;
-        }
-        .kegListNav .first p {
-          color: #515151;
-        }
-        .kegListNav .first p:hover {
-          border-bottom: 2px solid #515151;
-        }
         .box1 {
           display: grid;
           grid-template-columns: 1fr;
@@ -42,6 +32,9 @@ export default function KegList() {
           margin-left: 80px;
           margin-right: 80px;
           margin-bottom: 30px;
+          background: #1d175b;
+          color: white;
+          font-size: 28px;
         }
         .box1Content {
           display: flex;
@@ -51,17 +44,15 @@ export default function KegList() {
         .grid {
           display: grid;
           grid-template-columns: 1fr 1fr 1fr;
-          grid-gap: 10px;
-          margin-left: 80px;
-          margin-right: 80px;
+          grid-gap: 100px;
+          margin-left: 100px;
+          margin-right: 100px;
         }
       `}</style>
-      <div className="kegListNav">
-        <RightSide />
-      </div>
+      <RightSide2 />
       <div className="box1">
         <div className="box1Content">
-          <h1>The Keg</h1>
+          <h1>Keg's List</h1>
         </div>
       </div>
       <div className="grid">

@@ -10,6 +10,11 @@ export default function KegDetail(props) {
           text-align: center;
           background: #d5cbc1;
           padding: 5px;
+          height: 300px;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          padding-bottom: 10px;
         }
         h1 {
           color: #515151;
@@ -19,9 +24,11 @@ export default function KegDetail(props) {
         }
       `}</style>
       <div className="box">
-        <h1>{props.name}</h1>
-        <h2>{props.brand}</h2>
-        <h2>${props.price}</h2>
+        <div>
+          <h1>{props.name}</h1>
+          <h2>{props.brand}</h2>
+          <h2>${props.price}</h2>
+        </div>
       </div>
     </div>
   );
