@@ -12,6 +12,7 @@ export default function KegDetail(props) {
           text-align: center;
           margin-left: 30vw;
           margin-right: 30vw;
+          margin-bottom: 20px;
         }
       `}</style>
       <div className="box">
