@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import RightSide from "./RightSide";
 import Beer from "../assets/images/beer.png";
+import Footer from "./Footer";
 
 export default function Home() {
   return (
@@ -24,22 +25,31 @@ export default function Home() {
           margin-right: 90px;
         }
 
+        .enter {
+          text-align: center;
+        }
         .enter h1 {
           color: white;
-          text-decoration: none;
+          display: inline-block;
+        }
+
+        .enter h1:hover {
+          border-bottom: 2px solid white;
+          padding-bottom: 10px;
         }
       `}</style>
       <RightSide />
       <div className="imageContainer">
-        <img src={Beer} />
-      </div>
-      <div style={{ textAlign: "center" }}>
-        <Link to="/keglist">
-          <div className="enter">
-            <h1>Enter Site</h1>
-          </div>
+        <Link style={{ textDecoration: "none" }} to="/keglist">
+          <img src={Beer} />
         </Link>
       </div>
+      <Link style={{ textDecoration: "none" }} to="/keglist">
+        <div className="enter">
+          <h1>Enter Site</h1>
+        </div>
+      </Link>
+      <Footer />
     </div>
   );
 }
