@@ -1,6 +1,7 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 import Home from "./Home";
+import KegList from "./KegList";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       </style>
       <Switch>
         <Route exact path="/" component={Home} />
+        <Route exact path="/keglist" component={KegList} />
       </Switch>
     </div>
   );

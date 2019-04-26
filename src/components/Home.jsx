@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 export default function Home() {
   return (
     <div>
@@ -10,6 +10,10 @@ export default function Home() {
           }
         `}
       </style>
+
+      <Link to="/keglist">
+        <div className="keglist">Enter Site</div>
+      </Link>
     </div>
   );
 }
