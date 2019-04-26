@@ -24,7 +24,7 @@ export default function RightSide() {
           }
 
           .first p:hover {
-            border-bottom: 2px solid white; /* Or whatever color you want */
+            border-bottom: 2px solid white;
             padding-bottom: 30px;
             cursor: pointer;
           }
@@ -33,22 +33,19 @@ export default function RightSide() {
 
       <div className="container">
         <div className="first">
-          <p>Become a host</p>
+          <p>Keg Lists</p>
         </div>
         <div className="first">
-          <p>Help</p>
-        </div>
-        <div className="first">
-          <p>Sign up</p>
-        </div>
-        <div className="first">
-          <p>Log in</p>
+          <p>Brew Market</p>
         </div>
         <Link to="/about">
           <div className="first">
             <p>About Us</p>
           </div>
         </Link>
+        <div className="first">
+          <p>Help</p>
+        </div>
       </div>
     </div>
   );
