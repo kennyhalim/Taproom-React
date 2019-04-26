@@ -6,11 +6,16 @@
 
 ## Description
 
-_A web application that allows user to see different lists of kegs and be able to edit and add new keg._
+_A web application that allows user to see different lists of kegs and be able to edit and add new keg. This is quite different from the angular project since we have only used functional programming and have not make any object yet for React._
 
 ## Planning
 
 _<img src="flowchart.png">_
+
+## README Prompts
+
+1. Just had issues with styling with the Link tag. Resolve issue not being able to remove underline text decoration.
+2. Development process was pretty straightforward, no issues at all.
 
 ## Setup/Installation Requirements
 
