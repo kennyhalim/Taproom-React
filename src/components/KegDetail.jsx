@@ -6,10 +6,16 @@ export default function KegDetail(props) {
     <div>
       <style jsx>{`
         .box {
-          border: 1px solid black;
           border-radius: 5px;
-          background: lightblue;
           text-align: center;
+          background: #d5cbc1;
+          padding: 5px;
+        }
+        h1 {
+          color: #515151;
+        }
+        h2 {
+          color: #515151;
         }
       `}</style>
       <div className="box">
