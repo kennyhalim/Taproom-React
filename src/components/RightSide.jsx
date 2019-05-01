@@ -32,6 +32,11 @@ export default function RightSide() {
       </style>
 
       <div className="container">
+        <Link to="/">
+          <div className="first">
+            <p>Home</p>
+          </div>
+        </Link>
         <Link to="/keglist">
           <div className="first">
             <p>Keg Lists</p>

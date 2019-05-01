@@ -1,25 +1,10 @@
 import React from "react";
 import KegDetail from "./KegDetail";
 import RightSide2 from "./RightSide2";
-const masterKegList = [
-  {
-    name: "testName",
-    brand: "testBrand",
-    price: 5
-  },
-  {
-    name: "testName2",
-    brand: "testBrand2",
-    price: 6
-  },
-  {
-    name: "testName3",
-    brand: "testBrand3",
-    price: 7
-  }
-];
+import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
-export default function KegList() {
+export default function KegList(props) {
   return (
     <div>
       <style jsx>{`
@@ -48,6 +33,18 @@ export default function KegList() {
           margin-left: 100px;
           margin-right: 100px;
         }
+
+        .newKeg {
+          display: flex;
+          justify-content: space-around;
+          color: #515151;
+          border: 1px solid #515151;
+          border-radius: 5px;
+          margin-left: 510px;
+          margin-right: 510px;
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
       `}</style>
       <RightSide2 />
       <div className="box1">
@@ -55,16 +52,26 @@ export default function KegList() {
           <h1>Keg's List</h1>
         </div>
       </div>
+      <Link to="/NewKeg" style={{ textDecoration: "none" }}>
+        <h3 className="newKeg">Add a new Keg</h3>
+      </Link>
       <div className="grid">
-        {masterKegList.map((keg, index) => (
-          <KegDetail
-            name={keg.name}
-            brand={keg.brand}
-            price={keg.price}
-            key={index}
-          />
-        ))}
+        {Object.keys(props.kegs).map(function(kegId) {
+          var keg = props.kegs[kegId];
+          return (
+            <KegDetail
+              name={keg.name}
+              brand={keg.brand}
+              price={keg.price}
+              key={kegId}
+            />
+          );
+        })}
       </div>
     </div>
   );
 }
+
+KegList.propTypes = {
+  kegs: PropTypes.object
+};
