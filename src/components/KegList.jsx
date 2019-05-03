@@ -60,12 +60,22 @@ export default function KegList(props) {
         {Object.keys(props.kegs).map(function(kegId) {
           var keg = props.kegs[kegId];
           return (
-            <KegDetail
-              name={keg.name}
-              brand={keg.brand}
-              price={keg.price}
-              key={kegId}
-            />
+            <div key={kegId}>
+              <KegDetail
+                name={keg.name}
+                brand={keg.brand}
+                price={keg.price}
+                key={kegId}
+              />
+              <button
+                onClick={() => {
+                  props.onKegDeletion({ kegId });
+                }}
+                type="button"
+              >
+                Test
+              </button>
+            </div>
           );
         })}
       </div>
@@ -74,5 +84,6 @@ export default function KegList(props) {
 }
 
 KegList.propTypes = {
-  kegs: PropTypes.object
+  kegs: PropTypes.object,
+  onKegDeletion: PropTypes.func
 };

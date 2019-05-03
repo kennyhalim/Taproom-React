@@ -16,6 +16,7 @@ class App extends React.Component {
     };
     this.handleAddingNewKeg = this.handleAddingNewKeg.bind(this);
     this.handleChangingSelectedKeg = this.handleChangingSelectedKeg.bind(this);
+    this.handleDeletingKeg = this.handleDeletingKeg.bind(this);
   }
 
   handleAddingNewKeg(newKeg) {
@@ -26,7 +27,16 @@ class App extends React.Component {
     this.setState({ masterKegList: newMasterKegList });
   }
 
-  handleChangingSelectedKeg(newKegId) {}
+  handleChangingSelectedKeg(newKegId) {
+    this.setState({ selectedKeg: newKegId });
+  }
+
+  handleDeletingKeg(newKegId) {
+    console.log(newKegId.kegId);
+    let newMasterKegList = Object.assign({}, this.state.masterKegList);
+    delete newMasterKegList[newKegId.kegId];
+    this.setState({ masterKegList: newMasterKegList });
+  }
   render() {
     return (
       <div>
@@ -46,7 +56,7 @@ class App extends React.Component {
             render={() => (
               <KegList
                 kegs={this.state.masterKegList}
-                onKegSelection={this.handleChangingSelectedKeg}
+                onKegDeletion={this.handleDeletingKeg}
               />
             )}
           />
