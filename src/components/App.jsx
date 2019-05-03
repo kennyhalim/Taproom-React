@@ -15,7 +15,7 @@ class App extends React.Component {
       selectedKeg: null
     };
     this.handleAddingNewKeg = this.handleAddingNewKeg.bind(this);
-    this.handleSelectedKeg = this.handleSelectedKeg.bind(this);
+    this.handleChangingSelectedKeg = this.handleChangingSelectedKeg.bind(this);
   }
 
   handleAddingNewKeg(newKeg) {
@@ -26,7 +26,7 @@ class App extends React.Component {
     this.setState({ masterKegList: newMasterKegList });
   }
 
-  handleSelectedKeg(newKegId) {}
+  handleChangingSelectedKeg(newKegId) {}
   render() {
     return (
       <div>
@@ -43,7 +43,12 @@ class App extends React.Component {
           <Route
             exact
             path="/keglist"
-            render={() => <KegList kegs={this.state.masterKegList} />}
+            render={() => (
+              <KegList
+                kegs={this.state.masterKegList}
+                onKegSelection={this.handleChangingSelectedKeg}
+              />
+            )}
           />
           <Route
             exact
