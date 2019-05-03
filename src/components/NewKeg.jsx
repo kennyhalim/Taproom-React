@@ -9,6 +9,7 @@ export default function NewKeg(props) {
 
   function handleNewKegFormSubmission(keg) {
     keg.preventDefault();
+
     props.onNewKegCreation({
       name: _kegName.value,
       brand: _kegBrand.value,

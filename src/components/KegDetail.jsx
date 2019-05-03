@@ -14,6 +14,7 @@ export default function KegDetail(props) {
           display: flex;
           justify-content: space-around;
           align-items: center;
+          margin-top: -50px;
         }
         h1 {
           color: #515151;

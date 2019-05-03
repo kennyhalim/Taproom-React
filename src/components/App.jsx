@@ -11,7 +11,8 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      masterKegList: KegData
+      masterKegList: KegData,
+      selectedKeg: null
     };
     this.handleAddingNewKeg = this.handleAddingNewKeg.bind(this);
   }

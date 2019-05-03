@@ -44,6 +44,7 @@ export default function KegList(props) {
           margin-right: 510px;
           padding-top: 10px;
           padding-bottom: 10px;
+          margin-bottom: 80px;
         }
       `}</style>
       <RightSide2 />
