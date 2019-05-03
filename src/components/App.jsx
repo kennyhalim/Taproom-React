@@ -15,6 +15,7 @@ class App extends React.Component {
       selectedKeg: null
     };
     this.handleAddingNewKeg = this.handleAddingNewKeg.bind(this);
+    this.handleSelectedKeg = this.handleSelectedKeg.bind(this);
   }
 
   handleAddingNewKeg(newKeg) {
@@ -25,6 +26,7 @@ class App extends React.Component {
     this.setState({ masterKegList: newMasterKegList });
   }
 
+  handleSelectedKeg(newKegId) {}
   render() {
     return (
       <div>
