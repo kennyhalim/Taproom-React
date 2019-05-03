@@ -3,6 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import Home from "./Home";
 import KegList from "./KegList";
 import KegData from "./KegData";
+import EditKeg from "./EditKeg";
 import NewKeg from "./NewKeg";
 import Error404 from "./Error404";
 import { v4 } from "uuid";
@@ -17,6 +18,7 @@ class App extends React.Component {
     this.handleAddingNewKeg = this.handleAddingNewKeg.bind(this);
     this.handleChangingSelectedKeg = this.handleChangingSelectedKeg.bind(this);
     this.handleDeletingKeg = this.handleDeletingKeg.bind(this);
+    this.handleEditingKeg = this.handleEditingKeg.bind(this);
   }
 
   handleAddingNewKeg(newKeg) {
@@ -27,15 +29,18 @@ class App extends React.Component {
     this.setState({ masterKegList: newMasterKegList });
   }
 
-  handleChangingSelectedKeg(newKegId) {
-    this.setState({ selectedKeg: newKegId });
+  handleChangingSelectedKeg(keg) {
+    this.setState({ selectedKeg: keg });
   }
 
   handleDeletingKeg(newKegId) {
-    console.log(newKegId.kegId);
     let newMasterKegList = Object.assign({}, this.state.masterKegList);
     delete newMasterKegList[newKegId.kegId];
     this.setState({ masterKegList: newMasterKegList });
+  }
+
+  handleEditingKeg(kegToEdit) {
+    console.log(kegToEdit.name);
   }
   render() {
     return (
@@ -57,6 +62,7 @@ class App extends React.Component {
               <KegList
                 kegs={this.state.masterKegList}
                 onKegDeletion={this.handleDeletingKeg}
+                onKegSelection={this.handleChangingSelectedKeg}
               />
             )}
           />
@@ -64,6 +70,16 @@ class App extends React.Component {
             exact
             path="/NewKeg"
             render={() => <NewKeg onNewKegCreation={this.handleAddingNewKeg} />}
+          />
+          <Route
+            exact
+            path="/editkeg"
+            render={() => (
+              <EditKeg
+                kegToEdit={this.state.selectedKeg}
+                onKegEdit={this.handleEditingKeg}
+              />
+            )}
           />
           <Route component={Error404} />
         </Switch>

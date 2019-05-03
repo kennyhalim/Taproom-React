@@ -67,13 +67,22 @@ export default function KegList(props) {
                 price={keg.price}
                 key={kegId}
               />
+              <Link to="/editkeg">
+                <button
+                  onClick={() => {
+                    props.onKegSelection({ keg });
+                  }}
+                >
+                  Edit Keg
+                </button>
+              </Link>
               <button
                 onClick={() => {
                   props.onKegDeletion({ kegId });
                 }}
                 type="button"
               >
-                Test
+                Delete Keg
               </button>
             </div>
           );
@@ -85,5 +94,6 @@ export default function KegList(props) {
 
 KegList.propTypes = {
   kegs: PropTypes.object,
-  onKegDeletion: PropTypes.func
+  onKegDeletion: PropTypes.func,
+  onKegSelection: PropTypes.func
 };
