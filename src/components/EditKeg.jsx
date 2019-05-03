@@ -18,7 +18,6 @@ export default function EditKeg(props) {
     _kegBrand = "";
     _kegPrice = "";
   }
-  console.log(props);
   return (
     <div>
       <RightSide2 />

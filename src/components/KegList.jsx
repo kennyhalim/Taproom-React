@@ -70,7 +70,7 @@ export default function KegList(props) {
               <Link to="/editkeg">
                 <button
                   onClick={() => {
-                    props.onKegSelection({ keg });
+                    props.onKegSelection({ keg }, { kegId });
                   }}
                 >
                   Edit Keg
