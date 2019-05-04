@@ -37,9 +37,11 @@ export default function RightSide2() {
             <p>Home</p>
           </div>
         </Link>
-        <div className="first">
-          <p>Keg Lists</p>
-        </div>
+        <Link to="/keglist">
+          <div className="first">
+            <p>Keg Lists</p>
+          </div>
+        </Link>
         <div className="first">
           <p>Brew Market</p>
         </div>
