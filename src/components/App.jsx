@@ -4,6 +4,7 @@ import Home from "./Home";
 import KegList from "./KegList";
 import KegData from "./KegData";
 import EditKeg from "./EditKeg";
+import Test from "./Test";
 import NewKeg from "./NewKeg";
 import Error404 from "./Error404";
 import { v4 } from "uuid";
@@ -71,6 +72,11 @@ class App extends React.Component {
                 onKegSelection={this.handleChangingSelectedKeg}
               />
             )}
+          />
+          <Route
+            exact
+            path="/test"
+            render={() => <Test kegs={this.state.masterKegList} />}
           />
           <Route
             exact
