@@ -76,7 +76,7 @@ class App extends React.Component {
           <Route
             exact
             path="/test"
-            render={() => <Test kegs={this.state.masterKegList} />}
+            render={() => <Test onNewKegCreation={this.handleAddingNewKeg} />}
           />
           <Route
             exact
