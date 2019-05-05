@@ -109,7 +109,9 @@ export default class EditKeg extends Component {
               className="name"
               id="name"
               type="text"
-              placeholder={this.props.kegToEdit.keg.name}
+              placeholder="Name"
+              defaultValue={this.props.kegToEdit.keg.name}
+              required
               ref={input => {
                 this._kegName = input;
               }}
@@ -121,7 +123,9 @@ export default class EditKeg extends Component {
             <input
               className="name"
               type="text"
-              placeholder={this.props.kegToEdit.keg.brand}
+              placeholder="Brand"
+              defaultValue={this.props.kegToEdit.keg.brand}
+              required
               ref={input => {
                 this._kegBrand = input;
               }}
@@ -134,7 +138,9 @@ export default class EditKeg extends Component {
               className="name"
               type="number"
               min="1"
-              placeholder={this.props.kegToEdit.keg.price}
+              placeholder="Price"
+              defaultValue={this.props.kegToEdit.keg.price}
+              required
               ref={input => {
                 this._kegPrice = input;
               }}

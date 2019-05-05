@@ -109,6 +109,7 @@ export default class NewKeg extends Component {
               id="name"
               type="text"
               placeholder="Name"
+              required
               ref={input => {
                 this._kegName = input;
               }}
@@ -121,6 +122,7 @@ export default class NewKeg extends Component {
               className="name"
               type="text"
               placeholder="Brand"
+              required
               ref={input => {
                 this._kegBrand = input;
               }}
@@ -134,6 +136,7 @@ export default class NewKeg extends Component {
               type="number"
               min="1"
               placeholder="Price"
+              required
               ref={input => {
                 this._kegPrice = input;
               }}
