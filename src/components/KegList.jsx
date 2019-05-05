@@ -46,6 +46,16 @@ export default function KegList(props) {
           padding-bottom: 10px;
           margin-bottom: 80px;
         }
+
+        .kegDisplay {
+          text-align: center;
+          background: #8b6742;
+          border-radius: 5px;
+        }
+
+        .kegDisplay button {
+          margin: 10px;
+        }
       `}</style>
       <RightSide2 />
       <div className="box1">
@@ -60,7 +70,7 @@ export default function KegList(props) {
         {Object.keys(props.kegs).map(function(kegId) {
           var keg = props.kegs[kegId];
           return (
-            <div key={kegId}>
+            <div key={kegId} className="kegDisplay">
               <KegDetail
                 name={keg.name}
                 brand={keg.brand}
